@@ -1,0 +1,1 @@
+result = hrs * rate
