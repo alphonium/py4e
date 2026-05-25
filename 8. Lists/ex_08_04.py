@@ -10,7 +10,7 @@ for line in fhand:
     words = line.split()
     if len(words) == 0 : continue
     for word in words:
-        if word in unique : continue
-        else : unique.append(word)
+        if word not in unique :
+            unique.append(word)
 unique.sort()
 print(unique)
