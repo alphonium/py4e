@@ -6,7 +6,6 @@ except:
     exit()
 
 for line in fhand:
-    line = line.rstrip()
-    if not line.startswith("From "): continue
     words = line.split()
+    if len(words) < 3 or words[0] != "From" : continue 
     print(words[2])
