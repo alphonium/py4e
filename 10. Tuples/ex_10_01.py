@@ -12,4 +12,12 @@ for line in fhand:
     words = line.split()
     if len(words) < 2 or words[0] != "From" : continue
     senders[words[1]] = senders.get(words[1], 0) + 1
-print(senders)
+
+lst = list()
+for sender, count in list(senders.items()):
+    lst.append((count, sender))
+
+lst.sort(reverse=True)
+
+for count, sender in lst[0:1]:
+    print(sender, count)
