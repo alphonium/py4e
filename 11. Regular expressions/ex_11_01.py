@@ -6,6 +6,7 @@ count = 0
 for line in fhand:
     line = line.strip()
     x = re.findall('^Author', line)
-    count += 1
+    if len(x) > 0:
+        count += 1
     
 print(count)
