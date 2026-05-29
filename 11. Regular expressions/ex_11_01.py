@@ -1,12 +1,11 @@
 import re
 
 fhand = open('../data/mbox.txt')
-query = input("Enter query: ")
+query = input("Enter a regular expression: ")
 count = 0
 for line in fhand:
     line = line.strip()
-    x = re.findall(query, line)
-    if len(x) > 0:
+    if re.findall(query, line):
         count += 1
     
-print(count)
+print('mbox.txt had', count, 'lines that matched', query)
