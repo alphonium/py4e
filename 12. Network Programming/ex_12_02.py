@@ -9,8 +9,6 @@ except:
     print("Invalid URL", url)
     exit()
 
-print()
-
 mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 mysock.connect((host, 80))
 mysock.send(('GET '+url+' HTTP/1.0\r\n\r\n').encode())
